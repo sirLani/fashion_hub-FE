@@ -9,6 +9,10 @@ interface BoxProps {
   flexDirection?: string;
   justifyContent?: string;
   alignItems?: string;
+  backgroundColor?: string;
+  width?: string;
+  paddingTop?: string;
+  paddingBottom?: string;
 }
 
 export const Box = styled.div<BoxProps>`
@@ -20,4 +24,8 @@ export const Box = styled.div<BoxProps>`
   flex-direction: ${(props) => props.flexDirection};
   justify-content: ${(props) => props.justifyContent};
   align-items: ${(props) => props.alignItems};
+  background-color: ${(props) => props.backgroundColor};
+  width: ${(props) => props.width};
+  padding-top: ${(props) => props.paddingTop};
+  padding-bottom: ${(props) => props.paddingBottom};
 `;

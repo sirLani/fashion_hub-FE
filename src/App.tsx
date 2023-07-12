@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { NavBar } from "./components/base";
 import Home from "./views/Home";
+import { Footer } from "./components/Footer";
 
 const theme = {
   primary: "888F94",
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
+      <Footer />
     </ThemeProvider>
   );
 }
