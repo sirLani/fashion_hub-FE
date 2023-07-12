@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import { Wrapper } from "./Container";
+import { Wrapper } from "./base/Container";
 import logo from "../assets/fauxica.svg";
-import { Input } from "./input";
+import { Input } from "./base/Input";
 import { AiOutlineHeart } from "react-icons/ai";
 import { SlBasket } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
@@ -60,7 +60,7 @@ const NavItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  font-family: Poppins;
   &:last-child {
     margin-right: 0px;
   }

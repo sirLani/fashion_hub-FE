@@ -7,12 +7,17 @@ interface PrimaryButtonProps {
 }
 
 const PrimaryButtonStyle = styled.button<PrimaryButtonProps>`
-  height: 40px;
+  height: 52px;
   display: flex;
   color: ${(props) => props.textColor};
   font-weight: 700;
   justify-content: center;
   align-items: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #888f94;
+  padding: 0px 32px;
+  width: fit-content;
 `;
 
 export default function PrimaryButton({
