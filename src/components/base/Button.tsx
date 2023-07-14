@@ -18,6 +18,7 @@ const PrimaryButtonStyle = styled.button<PrimaryButtonProps>`
   background-color: #888f94;
   padding: 0px 32px;
   width: fit-content;
+  cursor: pointer;
 `;
 
 export default function PrimaryButton({

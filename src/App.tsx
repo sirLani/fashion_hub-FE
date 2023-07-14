@@ -6,6 +6,7 @@ import { NavBar } from "./components/base";
 import Home from "./views/Home";
 import { Footer } from "./components/Footer";
 import { Login } from "./views/Login";
+import { Register } from "./views/Register";
 
 const theme = {
   primary: "#888F94",
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
       <Footer />

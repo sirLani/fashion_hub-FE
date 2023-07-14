@@ -104,7 +104,6 @@ const FooterList = styled(Text)`
 `;
 
 const FooterContainer = styled.div`
-  position: fixed;
-  bottom: 0;
+  margin-top: auto;
   width: 100%;
 `;
