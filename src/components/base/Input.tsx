@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 interface InputProps {
   width?: string;
+  margin?: string;
 }
 
 export const Input = styled.input<InputProps>`
@@ -10,4 +11,5 @@ export const Input = styled.input<InputProps>`
   border-radius: 8px;
   width: ${(props) => props.width};
   padding-left: 12px;
+  margin: ${(props) => props.margin};
 `;

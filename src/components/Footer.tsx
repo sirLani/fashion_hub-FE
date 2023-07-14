@@ -1,58 +1,85 @@
 import React from "react";
 import { Box, Heading1, Text, Wrapper } from "./base";
 import { styled } from "styled-components";
+import { FaFacebookF } from "react-icons/fa";
+import {
+  AiOutlineInstagram,
+  AiOutlineTwitter,
+  AiFillYoutube,
+} from "react-icons/ai";
+
+let iconSize = 25,
+  fillColor = "ffffff",
+  right = "5px";
 
 export const Footer = () => {
   return (
-    <Box
-      backgroundColor="#547790"
-      paddingTop="2.5rem"
-      top="4rem"
-      paddingBottom="4rem"
-    >
-      <Wrapper>
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="space-between"
-          width="100%"
-        >
-          <Box>
-            <Heading>FASHIONHUB</Heading>
-            <Box width="15rem">
-              <FooterText>
-                Worried about not getting what you ordered from your tailor?
-                checkout a list of our creative designers
-              </FooterText>
+    <FooterContainer>
+      <Box
+        backgroundColor="#547790"
+        paddingTop="2.5rem"
+        top="4rem"
+        paddingBottom="4rem"
+      >
+        <Wrapper>
+          <Box
+            display="flex"
+            flexDirection="row"
+            justifyContent="space-between"
+            width="100%"
+          >
+            <Box>
+              <Heading>FASHIONHUB</Heading>
+              <Box width="15rem">
+                <FooterText>
+                  Worried about not getting what you ordered from your tailor?
+                  checkout a list of our creative designers
+                </FooterText>
+              </Box>
+            </Box>
+            <Box>
+              <Heading2>Sell</Heading2>
+              <FooterList>Sell on Faxica</FooterList>
+              <FooterList>Teams</FooterList>
+              <FooterList>Forum</FooterList>
+              <FooterList>Affiliate</FooterList>
+              <FooterList>Creators</FooterList>
+            </Box>
+            <Box>
+              <Heading2>About</Heading2>
+              <FooterList>Policies</FooterList>
+              <FooterList>Investors</FooterList>
+              <FooterList>Forums</FooterList>
+            </Box>
+            <Box>
+              <Heading2>Help</Heading2>
+              <FooterList>Help Center</FooterList>
+              <FooterList>Privacy settings</FooterList>
+              <FooterList>Forums</FooterList>
+              <FooterList>Size guide</FooterList>
+            </Box>
+            <Box>
+              <Heading2>Contact</Heading2>
+              <Box display="flex" justifyContent="center" alignItems="center">
+                <Box right={right}>
+                  <FaFacebookF size={iconSize - 5} color={fillColor} />
+                </Box>
+                <Box right={right}>
+                  <AiOutlineInstagram size={iconSize} color={fillColor} />
+                </Box>
+
+                <Box right={right}>
+                  <AiOutlineTwitter size={iconSize} color={fillColor} />
+                </Box>
+                <Box right={right}>
+                  <AiFillYoutube size={iconSize} color={fillColor} />
+                </Box>
+              </Box>
             </Box>
           </Box>
-          <Box>
-            <Heading2>Sell</Heading2>
-            <FooterList>Sell on Faxica</FooterList>
-            <FooterList>Teams</FooterList>
-            <FooterList>Forum</FooterList>
-            <FooterList>Affiliate</FooterList>
-            <FooterList>Creators</FooterList>
-          </Box>
-          <Box>
-            <Heading2>About</Heading2>
-            <FooterList>Policies</FooterList>
-            <FooterList>Investors</FooterList>
-            <FooterList>Forums</FooterList>
-          </Box>
-          <Box>
-            <Heading2>Help</Heading2>
-            <FooterList>Help Center</FooterList>
-            <FooterList>Privacy settings</FooterList>
-            <FooterList>Forums</FooterList>
-            <FooterList>Size guide</FooterList>
-          </Box>
-          <Box>
-            <Heading2>Contact</Heading2>
-          </Box>
-        </Box>
-      </Wrapper>
-    </Box>
+        </Wrapper>
+      </Box>
+    </FooterContainer>
   );
 };
 
@@ -74,4 +101,10 @@ const Heading2 = styled(Heading1)`
 const FooterList = styled(Text)`
   color: #ffffff;
   margin-top: 1rem;
+`;
+
+const FooterContainer = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 `;

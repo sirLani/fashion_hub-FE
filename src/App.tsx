@@ -5,10 +5,11 @@ import { ThemeProvider } from "styled-components";
 import { NavBar } from "./components/base";
 import Home from "./views/Home";
 import { Footer } from "./components/Footer";
+import { Login } from "./views/Login";
 
 const theme = {
-  primary: "888F94",
-  textColor: "000000",
+  primary: "#888F94",
+  textColor: "#000000",
 };
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
       <Footer />
