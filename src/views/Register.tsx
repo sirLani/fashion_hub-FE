@@ -1,24 +1,24 @@
 import React from "react";
 import { Box, Heading1, Input, Wrapper } from "../components/base";
 import { styled } from "styled-components";
-import PrimaryButton from "../components/base/Button";
+import { PrimaryButton } from "../components/base/Button";
 
 export const Register = () => {
   return (
     <Wrapper>
       <Box
-        display="flex"
-        justifyContent="center"
-        width="100%"
-        flexDirection="column"
-        alignItems="center"
+        $display="flex"
+        $justifycontent="center"
+        $width="100%"
+        $flexdirection="column"
+        $alignitems="center"
       >
         <Heading>Join Us</Heading>
         <Box
-          top="1rem"
-          display="flex"
-          justifyContent="center"
-          flexDirection="column"
+          $top="1rem"
+          $display="flex"
+          $justifycontent="center"
+          $flexdirection="column"
         >
           <Form>
             <InputContainer>
@@ -76,7 +76,7 @@ export const Register = () => {
                 required
               />
             </InputContainer>
-            <Box top="2rem">
+            <Box $top="2rem">
               <PrimaryButton>Join</PrimaryButton>
             </Box>
           </Form>

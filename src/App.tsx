@@ -10,14 +10,15 @@ import { Register } from "./views/Register";
 
 const theme = {
   primary: "#888F94",
-  textColor: "#000000",
+  textcolor: "#000000",
 };
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <NavBar />
       <Router>
+        <NavBar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />

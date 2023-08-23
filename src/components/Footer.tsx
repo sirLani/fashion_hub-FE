@@ -16,21 +16,21 @@ export const Footer = () => {
   return (
     <FooterContainer>
       <Box
-        backgroundColor="#547790"
-        paddingTop="2.5rem"
-        top="4rem"
-        paddingBottom="4rem"
+        $backgroundcolor="#547790"
+        $paddingtop="2.5rem"
+        $top="4rem"
+        $paddingbottom="4rem"
       >
         <Wrapper>
           <Box
-            display="flex"
-            flexDirection="row"
-            justifyContent="space-between"
-            width="100%"
+            $display="flex"
+            $flexdirection="row"
+            $justifycontent="space-between"
+            $width="100%"
           >
             <Box>
               <Heading>FASHIONHUB</Heading>
-              <Box width="15rem">
+              <Box $width="15rem">
                 <FooterText>
                   Worried about not getting what you ordered from your tailor?
                   checkout a list of our creative designers
@@ -60,18 +60,22 @@ export const Footer = () => {
             </Box>
             <Box>
               <Heading2>Contact</Heading2>
-              <Box display="flex" justifyContent="center" alignItems="center">
-                <Box right={right}>
+              <Box
+                $display="flex"
+                $justifycontent="center"
+                $alignitems="center"
+              >
+                <Box $right={right}>
                   <FaFacebookF size={iconSize - 5} color={fillColor} />
                 </Box>
-                <Box right={right}>
+                <Box $right={right}>
                   <AiOutlineInstagram size={iconSize} color={fillColor} />
                 </Box>
 
-                <Box right={right}>
+                <Box $right={right}>
                   <AiOutlineTwitter size={iconSize} color={fillColor} />
                 </Box>
-                <Box right={right}>
+                <Box $right={right}>
                   <AiFillYoutube size={iconSize} color={fillColor} />
                 </Box>
               </Box>

@@ -5,3 +5,4 @@ export * from "../Navbar";
 export * from "./Text";
 export * from "./Heading";
 export * from "./Box";
+export * from "./styled";

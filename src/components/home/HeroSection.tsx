@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Text, Wrapper } from "../base";
 import { styled } from "styled-components";
-import PrimaryButton from "../base/Button";
+import { PrimaryButton } from "../base/Button";
 import Image_1 from "../../assets/image-1.svg";
 import Image_2 from "../../assets/image-2.svg";
 import Image_3 from "../../assets/image-3.svg";
@@ -14,10 +14,10 @@ export const HeroSection = () => {
   return (
     <Wrapper>
       <Box
-        display="flex"
-        top="5rem"
-        justifyContent="center"
-        alignItems="center"
+        $display="flex"
+        $top="5rem"
+        $justifycontent="center"
+        $alignitems="center"
       >
         <LeftSide>
           <Heading>Quality apparel without Worrying about quality</Heading>
@@ -25,7 +25,7 @@ export const HeroSection = () => {
             Worried about not getting what you ordered from your tailor?
             <br /> checkout a list of our creative designers
           </Text>
-          <Box top="2rem">
+          <Box $top="2rem">
             <PrimaryButton>Browse our collection</PrimaryButton>
           </Box>
         </LeftSide>

@@ -1,25 +1,45 @@
+import { useState } from "react";
 import { styled } from "styled-components";
-import { Wrapper } from "./base/Container";
-import logo from "../assets/fauxica.svg";
-import { Input } from "./base/Input";
 import { AiOutlineHeart } from "react-icons/ai";
 import { SlBasket } from "react-icons/sl";
 import { CgProfile } from "react-icons/cg";
+import { useNavigate, useLocation, Link } from "react-router-dom";
+
+import { Wrapper } from "./base/Container";
+import logo from "../assets/fauxica.svg";
+import { Input } from "./base/Input";
+import { SecondaryButton } from "./base";
 
 let iconSize = 22;
 
 export const NavBar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const LoginButton = () => {
+    if (location.pathname === ("/login" || "/register")) {
+      return null;
+    } else {
+      return (
+        <SecondaryButton onClick={() => navigate("/login")} $marginleft="22px">
+          Login
+        </SecondaryButton>
+      );
+    }
+  };
+
   return (
     <Wrapper>
       <Box>
         <Logo src={logo} alt="logo" />
         <List>
-          <NavItem>NEW IN</NavItem>
-          <NavItem>MEN</NavItem>
-          <NavItem>WOMEN</NavItem>
-          <NavItem>CHILDREN</NavItem>
-          <NavItem>ACCESSORIES</NavItem>
-          <NavItem>SHOES</NavItem>
+          <NavItem to="/">NEW IN</NavItem>
+          <NavItem to="/">MEN</NavItem>
+          <NavItem to="/">WOMEN</NavItem>
+          <NavItem to="/">CHILDREN</NavItem>
+          <NavItem to="/">ACCESSORIES</NavItem>
+          <NavItem to="/">SHOES</NavItem>
         </List>
         <SearchBox>
           <InputContainer>
@@ -31,9 +51,13 @@ export const NavBar = () => {
           <SearchItem>
             <SlBasket size={iconSize} />
           </SearchItem>
-          <SearchItem>
-            <CgProfile size={iconSize} />
-          </SearchItem>
+          {isLoggedIn ? (
+            <SearchItem>
+              <CgProfile size={iconSize} />
+            </SearchItem>
+          ) : (
+            <LoginButton />
+          )}
         </SearchBox>
       </Box>
     </Wrapper>
@@ -54,13 +78,20 @@ const List = styled.div`
   display: flex;
 `;
 
-const NavItem = styled.div`
+const NavItem = styled(Link)`
   margin-right: 24px;
   font-size: 14px;
+  color: #000000;
   display: flex;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
   font-family: Poppins;
+  cursur: pointer;
+
+  &:hover {
+    color: #888f94;
+  }
   &:last-child {
     margin-right: 0px;
   }

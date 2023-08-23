@@ -4,7 +4,7 @@ import { HeroSection, PopularProducts } from "../components/home";
 
 const Home = () => {
   return (
-    <Box display="flex" flexDirection="column">
+    <Box $display="flex" $flexdirection="column">
       <Wrapper>
         <HeroSection />
       </Wrapper>
